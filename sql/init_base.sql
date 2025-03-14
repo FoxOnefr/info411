@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS meme_generator;
+USE meme_generator;
+
+CREATE TABLE IF NOT EXISTS memes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    image VARCHAR(255) NOT NULL,
+    text VARCHAR(255) NOT NULL,
+    votes INT DEFAULT 0
+  );
