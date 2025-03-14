@@ -15,7 +15,7 @@ $memes = getAllMemes($conn);
 
 </head>
 <body>
-    <h1>test p</h1>
+    <h1>Liste de memes</h1>
     <?php
     if ($memes->num_rows > 0) {
         // Afficher les données de chaque mème
@@ -34,5 +34,5 @@ $memes = getAllMemes($conn);
     ?>
     
 </body>
-<script src="./js/memeContainer.js"></script>
+<script src="js/memeContainer.js"></script>
 </html>

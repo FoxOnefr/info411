@@ -12,6 +12,15 @@ img{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.meme-container.hidden {
+.memeContainer.hidden {
     display: none;
+}
+
+.allMemes{
+    text-align: center;
+    
+}
+
+.memeContainer{
+    text-align: center;
 }
