@@ -1,5 +1,17 @@
-h1{
-    color: red;
-    text-align: center;
-    text-decoration: underline;
+img{
+    max-height: 300px;
+    max-width: 300px;
+}
+.allMemes{
+    display: flex;
+    gap: 3vh;
+}
+
+.memeContainer:hover{
+    transform: scale(1.05) ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meme-container.hidden {
+    display: none;
 }
