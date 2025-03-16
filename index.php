@@ -17,6 +17,7 @@ $memes = getAllMemes($conn);
 
 <body>
     <h1>Liste de memes</h1>
+    
     <?php
     if ($memes->num_rows > 0) {
         // Afficher les données de chaque mème
@@ -26,6 +27,7 @@ $memes = getAllMemes($conn);
             echo '<img src="' . $row["image"] . '" alt="' . $row["text"] . '">';
             echo '<p>' . $row["text"] . '</p>';
             echo '<p>Votes : ' . $row["votes"] . '</p>';
+            echo '<button id="voteMeme">Voter</button>';
             echo '</div>';
         }
         echo '</div>';
