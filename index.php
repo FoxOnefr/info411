@@ -14,6 +14,7 @@ $memes = getAllMemes($conn);
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
     <h1>Liste de memes</h1>
     <?php
@@ -32,6 +33,8 @@ $memes = getAllMemes($conn);
         echo "Aucun mème trouvé.";
     }
     ?>
+    <button id="showAllButton">Afficher tout les memes</button>
+    <button id="addMeme">Ajouter un meme</button>
     
 </body>
 <script src="js/memeContainer.js"></script>
