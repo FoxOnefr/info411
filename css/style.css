@@ -25,3 +25,12 @@ img{
     text-align: center;
     text-decoration:wavy;
 }
+
+.boutons{
+    display: flex;
+    margin-top: 5vh;
+    margin-right: 5vh;
+}
+
+
+

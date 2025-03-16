@@ -35,9 +35,11 @@ $memes = getAllMemes($conn);
         echo "Aucun mème trouvé.";
     }
     ?>
+    <div class="boutons">
     <button id="showAllButton">Afficher tout les memes</button>
     <button id="addMeme">Ajouter un meme</button>
-    
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="js/memeContainer.js"></script>
 </html>
