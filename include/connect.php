@@ -1,5 +1,7 @@
 <?php
-	    define ('SERVEUR_BD','localhost');
-	    define ('LOGIN_BD','root');
-	    define ('PASS_BD','root');
-	    define ('NOM_BD','meme_generator'); 
+	    define ('HOST','localhost');
+	    define ('MARIADB_USER','root');
+	    define ('MARIADB_PASSWORD ','root');
+	    define ('MARIADB_DATABASE ','meme_generator'); 
+		define( 'MARIADB_ROOT_PASSWORD ','qh');
+

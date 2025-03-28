@@ -22,10 +22,11 @@ $memes = getAllMemes($conn);
 if ($memes->num_rows > 0) {
     echo '<div class="allMemes">';
     while($row = $memes->fetch_assoc()) {
-        echo '<div class="memeContainer" data_id=' .  $row["id"] . 'onclick="showOnlyThisMeme(this)">';
+        echo '<div class="memeContainer onclick="showOnlyThisMeme(this)">';
         echo '<img src="' . $row["image"] . '" alt="' . $row["text"] . '">';
         echo '<p>' . $row["text"] . '</p>';
         echo '<p>Votes : ' . $row["votes"] . '</p>';
+        echo '<button id="showOnlyButton">Zoomer</button>';
         echo '</div>';
     }
     echo '</div>';
@@ -35,16 +36,9 @@ if ($memes->num_rows > 0) {
 ?>
     <div class="boutons">
     <button id="showAllButton">Afficher tout les memes</button>
-    <button id="addMeme">Ajouter un meme</button>
-<button id="voteMeme">Voter</button>
-
-<h2>Mode vote activé</h2>
-<p>Choisissez le mème à voter</p>
 </div>
 
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="js/memeContainer.js"></script>
-
 </html>
