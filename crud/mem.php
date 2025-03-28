@@ -37,5 +37,3 @@ function deleteMeme($id,$conn) {
     $stmt->bind_param("i", $id);
     return $stmt->execute();
 }
-
-updateMeme(1, "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/01/13/jameson-pfeiffer-syndrome.jpg", "J'ai arrêté un bus avec ma tête", 1, $conn);
