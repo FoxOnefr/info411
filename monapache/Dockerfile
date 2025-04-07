@@ -12,6 +12,6 @@ WORKDIR /var/www/html
 
 COPY . .
 
-RUN cp include/db_connect.php.docker include/db_connect.php
+RUN cp ../include/db_connect.php.docker ../include/db_connect.php
 
 EXPOSE 80
