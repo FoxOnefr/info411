@@ -14,6 +14,6 @@ RUN git clone https://github.com/FoxOnefr/info411.git html
 
 WORKDIR /var/www/html
 
-RUN cp include/db_connect.php.docker ../include/db_connect.php
+RUN cp include/db_connect.php.docker include/db_connect.php
 
 EXPOSE 80
