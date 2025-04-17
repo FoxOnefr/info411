@@ -5,13 +5,16 @@ services:
     - MARIADB_ROOT_PASSWORD=qh
     - MARIADB_USER=route
     - MARIADB_PASSWORD=root
-    - MARIADB_DATEBASE=meme-generator
+    - MARIADB_DATABASE=meme-generator
+    - MYSQL_DATABASE=${meme-generator}
   ports:
   - 3306:3306
   monapache:
     image: hugo38630/monapache
     ports:
       - 80:80
+    environment:
+      - SERVEUR_BD=${SERVEUR_BD}
   monubuntu:
     image: hugo38630/monubuntu
   phpmyadmin:
