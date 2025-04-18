@@ -1,26 +1,30 @@
+version: '3.8'
+
 services:
   mariadb:
-  image: mariadb
-  environment:
-    - MARIADB_ROOT_PASSWORD=${PASSWORD_ROOT_BD}
-    - MARIADB_USER=${LOGIN_BD}
-    - MARIADB_PASSWORD=${PASSWORD_BD}
-    - MARIADB_DATABASE=${SERVEUR_BD}
-
-  ports:
-  - 3306:3306
-  volumes:   
+    image: mariadb
+    environment:
+      - MARIADB_ROOT_PASSWORD=${PASSWORD_ROOT_BD}
+      - MARIADB_USER=${LOGIN_BD}
+      - MARIADB_PASSWORD=${PASSWORD_BD}
+      - MARIADB_DATABASE=${SERVEUR_BD}
+    ports:
+      - 3306:3306
+    volumes:   
       - ./db_data:/var/lib/mysql
+
   monapache:
-    image: hugo38630/monapache
+    image: hugo38630/monapache  
     ports:
       - 80:80
     volumes:
-      - ./var/www/html:/var/www/html
+      - ./var/www/html:/var/www/html  
     environment:
       - SERVEUR_BD=${SERVEUR_BD}
+
   monubuntu:
     image: hugo38630/monubuntu
+
   phpmyadmin:
     image: phpmyadmin
     environment:
